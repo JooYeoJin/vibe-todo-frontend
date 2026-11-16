@@ -1,0 +1,109 @@
+:root {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1a1a2e;
+  background: #f0f2f5;
+  --surface: #ffffff;
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --text-muted: #64748b;
+  --accent: #4f46e5;
+  --accent-hover: #4338ca;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --radius: 10px;
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  padding: 2.5rem 1.25rem 3rem;
+}
+
+input[type='text'] {
+  font: inherit;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: #fff;
+  color: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type='text']:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+input[type='text']:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn {
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 0.55rem 1rem;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, opacity 0.15s;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.btn-small {
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid #fecaca;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #fef2f2;
+  color: var(--danger-hover);
+}
